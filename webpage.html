@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen a Tamaño Completo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img src="Diseño sin título.png" alt="Imagen">
+    
+    <audio id="myAudio" autoplay>
+        <source src="Hilezkorrak [ ezmp3.co ].mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="playPauseButton">▶️</button>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        var playPauseButton = document.getElementById("playPauseButton");
+
+        playPauseButton.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                playPauseButton.textContent = "⏸️";
+            } else {
+                audio.pause();
+                playPauseButton.textContent = "▶️";
+            }
+        });
+
+        audio.volume = 0.5; // ajusta el volumen del audio (0.0 - 1.0)
+    </script>
+</body>
+</html>
