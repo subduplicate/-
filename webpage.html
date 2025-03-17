@@ -1,60 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        img {
-            max-width: 100%;
-            max-height: calc(100vh - 100px); /* Ajuste para evitar que se corte por arriba */
-        }
-        #playPauseButton {
-            background: transparent; /* Fondo transparente */
-            border: none;
-            font-size: 3em;
-            color: #888;
-            cursor: pointer;
-            padding: 10px 20px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Video Example</title>
 </head>
 <body>
-    <img src="Diseño sin título.png" alt="Imagen">
-    
-    <audio id="myAudio" autoplay>
-        <source src="Hilezkorrak [ ezmp3.co ].mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <button id="playPauseButton">▶️</button>
-
-    <script>
-        var audio = document.getElementById("myAudio");
-        var playPauseButton = document.getElementById("playPauseButton");
-
-        playPauseButton.addEventListener("click", function() {
-            if (audio.paused) {
-                audio.play();
-                playPauseButton.textContent = "⏸️";
-            } else {
-                audio.pause();
-                playPauseButton.textContent = "▶️";
-            }
-        });
-
-        audio.volume = 0.5; // ajusta el volumen del audio (0.0 - 1.0)
-    </script>
+    <h1>Video Example</h1>
+    <video width="320" height="240" controls>
+        <source src="New Project (2).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </body>
 </html>
